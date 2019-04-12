@@ -1,7 +1,7 @@
 FROM node:alpine as builder
 WORKDIR '/app'
 COPY ./package.json ./
-RUN npm install -save isexe
+RUN npm install -save escape-string-regexp
 COPY . .
 RUN npm run build
 
