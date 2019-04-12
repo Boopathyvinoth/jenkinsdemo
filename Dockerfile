@@ -1,7 +1,7 @@
 FROM node:alpine as builder
 WORKDIR '/app'
 COPY ./package.json ./
-RUN npm install -g graceful-fs
+RUN npm install -g graceful-fs isexe
 COPY . .
 RUN npm run build
 
